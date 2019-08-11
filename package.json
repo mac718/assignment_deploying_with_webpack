@@ -1,0 +1,36 @@
+{
+  "name": "assignment_deploying_with_webpack",
+  "version": "1.0.0",
+  "description": "Creating a React + Webpack app and deploying it to Heroku.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/.bin/webpack",
+    "start": "node_modules/.bin/webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikingeducation/assignment_deploying_with_webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikingeducation/assignment_deploying_with_webpack/issues"
+  },
+  "homepage": "https://github.com/vikingeducation/assignment_deploying_with_webpack#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
