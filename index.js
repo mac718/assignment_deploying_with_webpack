@@ -3,18 +3,9 @@ require('./style.css')
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
-//import PhotoList from './components/PhotoList'
+import PhotoList from './components/PhotoList'
 
-const PhotoLinks = ({links}) => {
- let photoLinks = links.map( link => {
-    return <li><a href={link}>{link}</a></li>
-  })
-  return (
-    <ul className='PhotoLinks'>{photoLinks}</ul>
-  )
-}
-
-class PhotoList extends Component {
+class App extends Component {
   constructor(){
     super()
     this.state = {
@@ -25,9 +16,9 @@ class PhotoList extends Component {
   componentDidMount() {
     fetch('https://dog.ceo/api/breeds/image/random/5')
       .then( response => {
-        // if (!response.ok) {
-        //   console.log(response.statusText, response.status)
-        // }
+        if (!response.ok) {
+          console.log(response.statusText, response.status)
+        }
         return response.json()
       })
       .then(json => {
@@ -36,16 +27,11 @@ class PhotoList extends Component {
   }
 
   render() {
-    const {photos} = this.state
-
-   
-   
-    return(
-      <PhotoLinks links={photos} />
-    )
+    const { photos } = this.state
+    return <PhotoList photos={ photos } />
     
   }
 }
 
 
-ReactDOM.render(<PhotoList />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
