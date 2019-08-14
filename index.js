@@ -28,8 +28,13 @@ class App extends Component {
 
   render() {
     const { photos } = this.state
-    return <PhotoList photos={ photos } />
-    
+
+    return (
+      <div className='App'>
+        <h1>Some Random Dog Photos</h1>
+        <PhotoList photos={ photos } />
+      </div>
+    )
   }
 }
 

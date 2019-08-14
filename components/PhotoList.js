@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PhotoLinks = ({links}) => {
+const PhotoLinks = ({ links }) => {
  let photoLinks = links.map( (link, i) => {
     return <li key={i}><a href={link}>{link}</a></li>
   })
@@ -9,7 +9,7 @@ const PhotoLinks = ({links}) => {
   )
 }
 
-const PhotoList = ({photos}) => {
+const PhotoList = ({ photos }) => {
   return(
     <PhotoLinks links={ photos } />
   )
